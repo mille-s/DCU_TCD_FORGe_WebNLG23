@@ -8,7 +8,7 @@ import os
 import sys
 
 language = sys.argv[1]
-morph_folder_name = sys.argv[2]
+temp_input_folder_morph = sys.argv[2]
 morph_input_folder = sys.argv[3]
 
 def process_FORGe(filepath, count_strs_all):
@@ -42,7 +42,7 @@ def process_FORGe(filepath, count_strs_all):
 
 if language == 'GA':
   # list_filepaths = glob.glob(os.path.join(folder_name, 'FORGe-out', '*conll_out.txt'))
-  list_filepaths = glob.glob(os.path.join(morph_folder_name, 'FORGe-out', '*.txt'))
+  list_filepaths = glob.glob(os.path.join(temp_input_folder_morph, '*.txt'))
 
   # To store how many texts we have in each file (used to )
   count_strs_all_FORGe = []
