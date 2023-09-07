@@ -1,5 +1,7 @@
 # DCU_TCD-FORGe_WebNLG23
-This is the repository that allows to generate the Irish texts submitted to the WebNLG'23 shared task by the DCU/TCD-FORGe team. If you just run all cells you can generate the final texts that you can collect in */content/all_GA_test_out.txt*.
+This is the repository that allows to generate the Irish texts submitted to the WebNLG'23 shared task by the DCU/TCD-FORGe team.
+
+If you just open *DCU_TCD_FORGe_WebNLG23.ipynb* in Colab and run all cells you can generate the final texts that you can collect in */content/all_GA_test_out.txt*.
 
 ## Parameters
 There are three types of parameters, which you can edit in teh second cell: (1) language, (2) grouping or not of modules, (3) data split.
