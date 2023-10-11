@@ -8,17 +8,20 @@ from xml.dom import minidom
 import os
 import re
 import codecs
+import json
 
-list_subj_str = sys.argv[1]
-list_obj_str = sys.argv[2]
+filepath_subj = sys.argv[1]
+filepath_obj = sys.argv[2]
 
-list_subj_str_clean = re.sub("\['", '', list_subj_str)
-list_subj_str_clean = re.sub("'\]", '', list_subj_str_clean)
-list_subj = list_subj_str_clean.split("', '")
+list_subj = []
+list_obj = []
+with open(filepath_subj) as json_file_s:
+  list_subj = json.load(json_file_s)
+with open(filepath_obj) as json_file_o:
+  list_obj = json.load(json_file_o)
 
-list_obj_str_clean = re.sub("\['", '', list_obj_str)
-list_obj_str_clean = re.sub("'\]", '', list_obj_str_clean)
-list_obj = list_obj_str_clean.split("', '")
+# print(list_subj)
+# print(list_obj)
 
 def removeReservedCharsFileName(entityName):
   # reservedChars = ['#', '%', '&', '\{', '\}', '\\', '<', '>', '\*', '\?', '/', ' ', '\$', '!', "'", '"', ':', '@', '\+', '`', '\|', '=']
