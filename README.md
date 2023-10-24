@@ -7,13 +7,19 @@ If you just open *DCU_TCD_FORGe_WebNLG23.ipynb* in Colab and run all cells you c
 There are three types of parameters, which you can edit in teh second cell: (1) language, (2) grouping or not of modules, (3) data split.
 
 1. **Language**: Irish only!
-- language = 'GA'. Only 'GA' will produce good outputs on the inputs provided in this repo. 
+- language = 'GA'. Only 'GA' will produce good outputs on the inputs provided in this repo.
+  
+2. **Query DBpedia for class**
+- get_class_gender = 'yes' or 'no'. If 'yes' is selected, the system will look for class and gender information on DBpedia to improve the text (it takes additional time); if 'no' is selected, the classes and genders compiled for the WebNLG dataset will be used. 
+  
+3. **Concatenate output files**
+- concatenate_output_files = 'yes' or 'no'. If 'yes' is selected, the output texts will be gathered in one single file, otherwise, there will be one file per input file fed to the generator. Take into account that if you generate from a large XML file, it will be split into smaller files for processing, and these are the input files.
 
-2. **Module grouping**: Do you want the output text only or the intermediate representations too?
-- group_modules_prm = 'yes', the pipeline will group the consecutive modules of the same system and will save only the output of each system without intermediate representations; this allows for faster generation.
-- group_modules_prm = 'no', the pipeline will apply all modules separately whatever system is called and generate all intermediate representations, but this makes the generation slower.
+4. **Module grouping**: Do you want the output text only or the intermediate representations too?
+- generate_intermediate_representations = 'no', the pipeline will group the consecutive modules of the same system and will save only the output of each system without intermediate representations; this allows for faster generation.
+- generate_intermediate_representations = 'yes', the pipeline will apply all modules separately whatever system is called and generate all intermediate representations, but this makes the generation slower.
 
-3. **Data split**: 
+5. **Data split**: 
 - split = 'dev/test/train', used to name the output zip file.
 
 Notes:
