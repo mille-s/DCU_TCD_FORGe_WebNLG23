@@ -20,7 +20,7 @@ def clear_files(folder):
       except Exception as e:
         print('Failed to delete %s. Reason: %s' % (file_path, e))
         
-def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_input_folder, count_strs_all_FORGe, show_input):
+def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_output_folder, count_strs_all_FORGe, show_input):
   # Call morph generator
   # v3 (fast, ~2sec/450 texts)
   clear_files(morph_output_folder)
