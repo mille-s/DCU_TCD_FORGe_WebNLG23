@@ -29,9 +29,9 @@ def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_ou
   for filepath in sorted(glob.glob(os.path.join(morph_input_folder, '*.*'))):
     count_strs_all = 0
     head, tail = os.path.split(filepath)
-    filename = tail.rsplit('.')[0]
-    print('Processing '+filename)
-    fo = codecs.open(morph_output_folder+'/'+filename+'_out.txt', 'w', 'utf-8')
+    filename_out = tail.rsplit('.')[0]
+    print('Processing '+filename_out)
+    fo = codecs.open(morph_output_folder+'/'+filename_out+'_out.txt', 'w', 'utf-8')
     # Next line: how it can work if the code is used directly on Colab
     # list_inflected_words = ! cat {filepath} | {morph_folder_name}'/flookup' -a {morph_folder_name}'/allgen.fst'
     # Next lines: module version of the line above; it returns bytes instead of strings, and additional linebreak delimiters
@@ -98,3 +98,5 @@ def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_ou
     fo.write('Texts per file: '+str(count_strs_all_Morph)+'\n')
     fo.write('---------------------------------\n')
   clear_files(morph_input_folder)
+
+  return filename_out
