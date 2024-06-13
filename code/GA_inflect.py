@@ -98,5 +98,3 @@ def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_ou
     fo.write('Texts per file: '+str(count_strs_all_Morph)+'\n')
     fo.write('---------------------------------\n')
   clear_files(morph_input_folder)
-
-  return filename_out
