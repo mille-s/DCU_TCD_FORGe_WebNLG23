@@ -5,6 +5,7 @@ import glob
 import codecs
 import re
 import os
+import subprocess
 
 def clear_files(folder):
   """Function to clear files from a folder."""
