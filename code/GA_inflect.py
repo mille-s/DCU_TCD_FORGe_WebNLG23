@@ -31,7 +31,12 @@ def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_in
     filename = tail.rsplit('.')[0]
     print('Processing '+filename)
     fo = codecs.open(morph_output_folder+'/'+filename+'_out.txt', 'w', 'utf-8')
-    list_inflected_words = ! cat {filepath} | {morph_folder_name}'/flookup' -a {morph_folder_name}'/allgen.fst'
+    # Next line: how it can work if the code is used directly on Colab
+    # list_inflected_words = ! cat {filepath} | {morph_folder_name}'/flookup' -a {morph_folder_name}'/allgen.fst'
+    # Next lines: module version of the line above; it returns bytes instead of strings, and additional linebreak delimiters
+    list_inflected_words_raw = subprocess.Popen("cat "+filepath+" | "+morph_folder_name+"'/flookup' -a "+morph_folder_name+"'/allgen.fst'", shell=True, stdout=subprocess.PIPE).stdout.readlines()
+    # I changed the way to make the shell call above, hence I received a different output; I'm not a mathematician but with the next line I reduce to problem to one that was already solved.
+    list_inflected_words = [str(raw_word, encoding='utf-8').replace('\n', '') for raw_word in list_inflected_words_raw]
     # print(list_inflected_words)
 
     # Create a variable to store the outputs
