@@ -9,8 +9,8 @@ Open *DCU_TCD_FORGe_WebNLG23.ipynb* in Colab and:
 ## Parameters
 There are three types of parameters, which you can edit in the second cell: (1) language, (2) grouping or not of modules, (3) data split.
 
-1. **Language**: Irish only!
-- language = 'GA'. Only 'GA' will produce good outputs on the CoNLL inputs provided in this repo. If you upload an XML file, you can select EN.
+1. **Language**: Irish only if you don't provide input XMLs!
+- language = 'GA'. Only 'GA' will produce good outputs on the CoNLL inputs provided in this repo. If you upload an XML file, you can select EN or FR.
   
 2. **Query DBpedia for class**
 - get_class_gender = 'yes' or 'no'. If you use an XML file, if 'yes' is selected, the system will look for class and gender information on DBpedia to improve the text (it takes additional time); if 'no' is selected, the classes and genders compiled for the WebNLG dataset will be used. 
