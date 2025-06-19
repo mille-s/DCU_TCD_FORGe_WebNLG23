@@ -124,6 +124,7 @@ mostChampions-mostChamps
 musicComposer-composer
 musicFusionGenre-fusiongenres
 derivative-derivatives
+NationalRegisterOfHistoricPlacesReferenceNumber-ReferenceNumber in the National Register of Historic Places-nrhpReferenceNumber
 nationalTeam-nationalteam
 nativeName-nativenameA
 neighboringMunicipalities-neighboringMunicipality
