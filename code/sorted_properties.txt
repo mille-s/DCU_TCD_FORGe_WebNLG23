@@ -356,7 +356,7 @@ professionalField-field
 protein
 publisher
 r1LengthM-1st_runway_LengthMetre
-recordedIn--recordDate
+recordedIn-recordDate
 rector
 region-administrativeCounty
 regionServed
