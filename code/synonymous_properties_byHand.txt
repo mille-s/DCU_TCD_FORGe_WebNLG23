@@ -1,4 +1,4 @@
-1stRunwayLengthFeet-1stRunwayLengthMetre-1st_runway_LengthFeet-r1LengthF
+1stRunwayLengthFeet-1stRunwayLengthMetre-1st_runway_LengthFeet-r1LengthF-r1LengthM-1st_runway_LengthMetre
 1stRunwayNumber-1st_runway_Number-r1Number
 1stRunwaySurfaceType-1st_runway_SurfaceType-r1Surface
 2ndRunwaySurfaceType-2nd_runway_SurfaceType-r2Surface
@@ -59,7 +59,7 @@ currentclub-currentteam
 cylinderCount-cylindercount
 dateOfRet-dateOfRetirement
 deathCause-CauseOfDeath-MannerOfDeath
-deathDate-deathYear-DateOfDeath
+deathDate-deathYear-DateOfDeath-dateOfDeath
 deathPlace-placeOfDeath-PlaceOfDeath
 density-Planet/density
 designer-designCompany
@@ -162,7 +162,7 @@ served-servingTemperature
 servedAsChiefOfTheAstronautOfficeIn-served as Chief of the Astronaut Office in-years
 shipOrdered-orderDate
 significantBuilding-significantBuildings
-southeast-has to its southeast
+southeast-has to its southeast-hasToItsSoutheast
 sport-sportsOffered
 sportGoverningBody-union-sportsGoverningBody
 spouse-Spouse
