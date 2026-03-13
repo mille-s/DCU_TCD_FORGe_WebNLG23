@@ -18,23 +18,23 @@ def process_FORGe(filepath, count_strs_all):
   fo = codecs.open(os.path.join(morph_input_folder, filename), 'w', 'utf-8')
   for line in lines:
     # Replace apostrophes/parentheses by something else, they make morph break
-    line = re.subn("'", '_APSTR_', line)[0]
-    line = re.subn("\(", '_OBRKT_', line)[0]
-    line = re.subn("\)", '_CBRKT_', line)[0]
-    line = re.subn("&", '_AMPRS_', line)[0]
-    line = re.subn(";", '_SEMICOL_', line)[0]
-    line = re.subn("\$", '_DOLLSIGN_', line)[0]
+    line = re.subn(r"'", r'_APSTR_', line)[0]
+    line = re.subn(r"\(", r'_OBRKT_', line)[0]
+    line = re.subn(r"\)", r'_CBRKT_', line)[0]
+    line = re.subn(r"&", r'_AMPRS_', line)[0]
+    line = re.subn(r";", r'_SEMICOL_', line)[0]
+    line = re.subn(r"\$", r'_DOLLSIGN_', line)[0]
     # The next line was not activated for the WebNLG submission
-    # line = re.subn("\+", '_PLUSSIGN_', line)[0]
-    line = re.subn('\"', '_DBLQUOT_', line)[0]
+    # line = re.subn(r"\+", r'_PLUSSIGN_', line)[0]
+    line = re.subn(r'\"', r'_DBLQUOT_', line)[0]
     # clean quotes that MATE can’t take care of
-    line = re.subn('\\\\"([^\\\\]+)\\\\', '\\"\g<1>\\"', line)[0]
+    line = re.subn(r'\\\\"([^\\\\]+)\\\\', r'\\"\g<1>\\"', line)[0]
     # In FORGe I use % as separator, we need +
-    line = re.subn('%', '+', line)[0]
+    line = re.subn(r'%', r'+', line)[0]
     # Insert linebreak after each final sentence to separate texts from each other (one text can have several sentences)
-    line = re.subn(' \.$', ' .\n', line)[0]
+    line = re.subn(r' \.$', r' .\n', line)[0]
     # Put each word on one line
-    line = re.subn(' ', '\n', line)[0]
+    line = re.subn(r' ', r'\n', line)[0]
     # Copy to morph gen input folder
     fo.write(line)
   fo.close()
