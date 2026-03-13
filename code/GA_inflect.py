@@ -48,12 +48,12 @@ def run_GA_morphGen(root_folder, morph_folder_name, morph_input_folder, morph_ou
       input_string = ''
       morph_returned = ''
       morph_backup = ''
-      if re.search('\t', word):
+      if re.search(r'\t', word):
         # for every space an empty string is returned; we'll ignore them later. Between two consecutive texts there is a simple "\t" with nothing around. I use this to introduce linebreaks later.
         empty = 'no'
         input_string = word.split('\t')[0]
         morph_returned = word.split('\t')[1]
-        if re.search('\+', word):
+        if re.search(r'\+', word):
           morph_backup = input_string.split('+', 1)[0]
         else:
           morph_backup = input_string
